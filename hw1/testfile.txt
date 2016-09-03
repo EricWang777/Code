@@ -1,0 +1,16 @@
+   100
+BUILD   2   10          green
+      SKYLINE   4
+EXTEND 2 16 red
+EXTEND 4 5 blue
+SKYLINE 20
+DEMOLISH   2 
+SKYLINE 1
+   BUILD 5 100 blue
+      SKYLINE 50
+      BUILD 6 50 black
+     BUILD 1 50 red
+    BUILD 3 48 blue
+    EXTEND 3 20 red
+    BUILD 4 70 green
+    SKYLINE 30

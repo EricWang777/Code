@@ -1,0 +1,15 @@
+Build Success! Block: 2 Height: 10
+sky green sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky 
+Extend Success!Block: 2 Height: 26
+Error - incorrect command
+sky red sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky 
+Demolish Success!Block: 2
+sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky 
+Build Success! Block: 5 Height: 100
+sky sky sky sky blue sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky 
+Build Success! Block: 6 Height: 50
+Build Success! Block: 1 Height: 50
+Build Success! Block: 3 Height: 48
+Extend Success!Block: 3 Height: 68
+Build Success! Block: 4 Height: 70
+red sky blue green blue black sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky sky 
