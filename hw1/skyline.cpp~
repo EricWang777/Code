@@ -104,7 +104,6 @@ int main(int argc, char* argv[])
   int *buildingheights;
   string **skyline;
   string curr;
-  string extra;
 
   input >> constructionspots;
   getline(input, curr); //consume the newline character for the first line.
@@ -126,9 +125,7 @@ int main(int argc, char* argv[])
 		  ss >> x;
 		  ss >> y;
 		  ss >> c;
-
-		  if (ss.fail() || skyline[x] != NULL || x >= constructionspots
-		  	  || ss >> extra) {
+		  if (ss.fail() || skyline[x] != NULL || x > constructionspots) {
 			  output << "Error - incorrect command" << endl;
 		  }
 		  else {
@@ -141,8 +138,7 @@ int main(int argc, char* argv[])
 	  	ss >> x;
 	  	ss >> y;
 	  	ss >> c;
-	  	if (ss.fail() || skyline[x] == NULL || x >= constructionspots
-	  		|| ss >> extra){
+	  	if (ss.fail() || skyline[x] == NULL){
 	  		output << "Error - incorrect command" << endl;
 	  	}
 	  	else{
@@ -153,7 +149,7 @@ int main(int argc, char* argv[])
 	  else if (curr == "DEMOLISH") {
 	  	int x;
 	  	ss >> x;
-	  	if (ss.fail() || skyline[x] == NULL || ss >> extra){
+	  	if (ss.fail() || skyline[x] == NULL){
 	  		output << "Error - incorrect command" << endl;
 	  	}
 	  	else{
@@ -163,7 +159,7 @@ int main(int argc, char* argv[])
 	  else if (curr == "SKYLINE") {
 	  	int y;
 	  	ss >> y;
-	  	if (ss.fail() || y < 1 || ss >> extra){
+	  	if (ss.fail() || y < 1){
 	  		output << "Error - incorrect command" << endl;
 	  	}
 	  	else{
