@@ -20,9 +20,6 @@ void Build(string* &currSkyscraper, int height, int spot,
 			currSkyscraper[i] = color;
 		}
 		totalHeight = height;
-		outputfile << "Build Success! " << "Block: "
-				   << spot << " Height: "
-				   << totalHeight << endl;
 	}
 }
 
@@ -47,9 +44,6 @@ void Extend(string* &currSkyscraper, int addHeight, int spot,
 			currSkyscraper[i] = color;
 		}
 		currHeight += addHeight; // build finish
-		outputfile << "Extend Success!" << "Block: "
-				   << spot << " Height: "
-				   << currHeight << endl;
 	} 
 }
 
@@ -65,8 +59,6 @@ void Demolish(string* &currSkyscraper, ofstream& outputfile,
 	delete[] currSkyscraper;
 	height = 0;
 	currSkyscraper = NULL;
-	outputfile << "Demolish Success!" << "Block: "
-			   << spot << endl;
 
 }
 
