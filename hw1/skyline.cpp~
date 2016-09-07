@@ -75,7 +75,7 @@ void Skyline(string** skyline, int height, int numBuilding,
 		if (height < buildingheights[i]){
 			outputfile << skyline[i][height] << " ";
 		}
-		else outputfile << "SKY ";
+		else outputfile << "sky ";
 	}
 	outputfile << endl;
 }
