@@ -1,0 +1,12 @@
+The returned LinkedList is [5,4,3,2,1]
+The input of the last recursion in funcA should be pointer pointing to the
+last element of the inputed Linked List, which is 5. This pointer is returned 
+to "out" and now "in" is pointing to the last second element which is 4.
+Then move to funcB. 
+in2 -> next == NULL. So in2->next = in1; which make 5->next point back to 4.
+Then back to funcA.
+in->next = NULL. It makes 4->next = NULL; 
+Then trace back to previous recursion where in points to 3 and out points to 4;
+Similarly, move to funcB; It make 4->next = 3 and 3->next = NULL;
+As a result, the entire function A and B aims to reverse the inputed linked list, 
+so the final ouputed linked list is [5,4,3,2,1];

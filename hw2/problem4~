@@ -1,0 +1,11 @@
+1.  A map whose key is integer: zip codes and content is double: voting statistics. Because 
+	by using a map, we only need to use key to access the content. As a reuslt,
+	if we want the statistics, we only need to input the zip code, which is 
+	the key, and then can get the statistics.
+	
+2.  A set of integer: the student's ID. Because we don't need to sort the 
+	ID of those who solve the problems. Also, those ID should not be duplicated.
+	We just need to store those ID.
+	
+3.  A list of string: the name of Pokemon. Because we need to sort them, using a
+	list is an appropriate mean. The index of the Pokemon 

@@ -1,0 +1,86 @@
+Bingtang Wang
+8675881382
+bingtanw@usc.edu
+
+Problem 1:
+Part(a): Untracked
+Part(b): both Untracked
+Part(c): both Staged
+Part(d): both Modified
+Part(e): README.md, Staged; fun_problem.txt, unmodified, nothing in this file.
+git checkout -- fun_problem.txt means get back to the status of last commit. 
+At that time, this file was not modified.
+Part(f): modified. The status changes from staged to unmodified by automcatically
+commiting and then shifted to modified. 
+
+////////////////
+Problem 3:
+Part(a)
+1. "Do something..." O(1);
+2. for (int j = 1; j < i; j *= 2) O(logi);
+3. for (int i = 0; i < n; i++) Sigma[form i = 0 to i = n-1](logi) = 
+	O(log(n-1)!) = O(log(n^n)) = O(nlogn);
+	Run time = O(nlogn);
+	
+Part(b)
+1. "Do something..." O(1);
+2. for (int k = j; k < n; k++) Sigma[k = j -> n-1](O(1)) = O(n-j) = O(n)
+3. for (int j = 0; j < n; j++) O(n); however, if condition gets triggered 
+	by n/i times in this for loop. so it should be O(n/i).
+4. for (int i = 1; i < n; i *= 2) O(logn); But for each i, the second for loop
+	runs n/i times.
+	Sigma[x = 0 -> logn](n/(2^x))*n = n^2*Sigma[x = 0 -> logn]((1/2)^x) =
+	n^2*(2-(1/2)^(logn)) = 2n^2 = O(n^2);
+	
+Part(c)
+1.  for the first for loop:
+	1 << i = 2^i;
+	What this for loop does is to make a linked list as [2,4,8,16,...,2^n];
+	The next for loop:
+	each loop runs log(2^x) = x where x = 1,2,3,...,n;
+	So the final run time is
+	Sigma[x = 1 -> n](x) = O(n^2);
+	
+Part(d)
+1. the most inside for loop: O(size),
+2. if run time: O(5+size) = O(size);
+3. if is trigered as size = 10, 20, 40, so the times is log(n/10);
+4. each time it runs 2^i
+5. total run time is Sigma[x = 0 -> logn] 2^i = O(2^logn) = O(n)
+
+/////////////////
+Problem 4:
+1.  A map whose key is integer: zip codes and content is double: voting statistics. Because 
+	by using a map, we only need to use key to access the content. As a reuslt,
+	if we want the statistics, we only need to input the zip code, which is 
+	the key, and then can get the statistics.
+	
+2.  A set of integers: the student's ID. Because we don't need to sort the 
+	ID of those who solve the problems. Also, those ID should not be duplicated.
+	We just need to store those ID.
+	
+3.  A list of strings: the name of Pokemon. Because we need to sort them, using a
+	list is an appropriate mean. The names of the Pokemons should be placed
+	in the index of list which is the same as the index of the Pokemons.
+	
+4.  A map whose key is structure consisting of string: movie name and integer: 
+	year of released; whose content is set of strings: the reviews. Because 
+	we search the reviews by the name and the year, using the key is appropriate way.
+	Moreover, the reviews should not be duplicated in order to prevent wordy information and 
+	we don't need to sort the reviews. As a result, a set is good way to store 
+	reviews.
+	
+/////////////////
+Problem 5:
+The returned LinkedList is [5,4,3,2,1]
+The input of the last recursion in funcA should be pointer pointing to the
+last element of the inputed Linked List, which is 5. This pointer is returned 
+to "out" and now "in" is pointing to the last second element which is 4.
+Then move to funcB. 
+in2 -> next == NULL. So in2->next = in1; which make 5->next point back to 4.
+Then back to funcA.
+in->next = NULL. It makes 4->next = NULL; 
+Then trace back to previous recursion where in points to 3 and out points to 4;
+Similarly, move to funcB; It make 4->next = 3 and 3->next = NULL;
+As a result, the entire function A and B aims to reverse the inputed linked list, 
+so the final ouputed linked list is [5,4,3,2,1].
