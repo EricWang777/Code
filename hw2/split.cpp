@@ -32,44 +32,4 @@ void split (Node*& in, Node*& odds, Node*& evens){
     }
 }
 ///////////////
-void printLL(Node* in){
-    while (in != NULL){
-        cout << in->value << " ";
-        in = in->next;
-    }
-    cout << endl;
-}
-
-int main(){
-    // create a linklist
-    Node* in = new Node;
-    Node* odd = new Node;
-    Node* even = new Node;
-    in->value = 0;
-    in->next = NULL;
-    //int num;
-    Node* head = in;
-    
-    for (int i = 1; i < 20; i ++) {
-        
-        
-        Node* nNode = new Node;
-        nNode->value = i;
-        nNode->next = NULL;
-        in->next = nNode;
-        in = in->next;
-        
-    }
-    
-    printLL(head);
-    split(head, odd, even);
-    
-    
-    //print Node
-    
-    printLL(even);
-    printLL(odd);
-    
-    return 0;
-}
 
