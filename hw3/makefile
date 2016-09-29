@@ -1,0 +1,22 @@
+
+GTEST_LL = -I /usr/include/gtest/ -l gtest -l gtest_main -pthread
+
+all: llisttest stringparser
+	-@echo "---ALL BUILT---"
+
+lliststring.o: lliststring.cpp lliststring.h 
+	g++ -g -Wall -c lliststring.cpp -o lliststring.o
+
+llisttest: llisttest.cpp lliststring.o
+	g++ -g -Wall $^ $(GTEST_LL) -o llisttest
+	
+stackstring.o: stackstring.cpp stackstring.h
+	g++ -g -Wall -c stackstring.cpp -o stackstring.o
+	
+stringparser: lliststring.o stackstring.o stringparser.cpp
+	g++ -g -Wall $^ -o stringparser
+
+clean:
+	rm llisttest
+	rm stringparser
+	-@echo "---ALL CLEAN---"
