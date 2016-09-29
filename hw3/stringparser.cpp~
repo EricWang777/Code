@@ -1,4 +1,10 @@
-
+//
+//  main.cpp
+//  hw2q7
+//
+//  Created by WangBingtang on 9/8/16.
+//  Copyright © 2016 USC. All rights reserved.
+//
 
 #include <iostream>
 #include <cstring>
