@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include <cstring>
 #include <string>
@@ -40,7 +42,18 @@ bool validity (string input){
     int openPara = 0; // "("
     int closePara = 0; // ")"
 
-
+    // if no + - < > in
+//    if (input.find("+") == string::npos && input.find("-") == string::npos
+//        && input.find("<") == string::npos && input.find(">") == string::npos) {
+//        if (input.find("(") != string::npos && input.find(")") != string::npos) {
+//            return false;
+//        }
+//        
+//    }
+    
+ 
+    
+    
     for (string::iterator it = input.begin(); it != input.end(); ++it){
         if (*it == '<' || *it == '>' || *it == ')' || *it == '(') {
             if (*(it-1) >= 'a' && *(it-1) <= 'z' &&
@@ -117,6 +130,9 @@ bool validity (string input){
     		}
     	}
     }
+    
+    
+    
 
     return true;
 }
@@ -192,10 +208,9 @@ string opLine(StackString stack, string sentences){
         return "Malformed";
     }
     
-    for (string::iterator it = sentences.begin(); 
+    for (string::iterator it = sentences.begin(); // go through each character in sentences
          it != sentences.end();
          ++it){
-    	// go through each character in sentences
         if (*it != ')') { // when not seeing close para, pushing on stack
             // character by character
             if (*it < 'a' || *it > 'z'){
@@ -255,15 +270,15 @@ string opLine(StackString stack, string sentences){
                 else if (switchString == false){
                     // reading the right-hand side of the operator into s2
                     if (stack.top() == "<"){
-                     // if see the remove end notation, remove the end of s2
+                        // if see the remove end notation, remove the end of s2
                         stack.pop(); // pop the "<"
                         if (stack.empty()){ // nothing after <
                             //throw invalid_argument("Malformed");
                             return "Malformed";
                         }
-                        if (*stack.top().c_str() > 'a' && 
-                        	*stack.top().c_str() < 'z'){
+                        if (*stack.top().c_str() > 'a' && *stack.top().c_str() < 'z'){
                             // < in the middle of the string
+                            //throw invalid_argument("< is in the middle of the string");
                             return "Malformed";
                         }
                         // after everything is fine
@@ -273,11 +288,12 @@ string opLine(StackString stack, string sentences){
                     else if (stack.top() == ">"){
                         stack.pop();
                         if (stack.empty()){
+                            //throw invalid_argument("Malformed");
                             return "Malformed";
                         }
-                        if (*stack.top().c_str() >= 'a' && 
-                        	*stack.top().c_str() <= 'z'){
+                        if (*stack.top().c_str() >= 'a' && *stack.top().c_str() <= 'z'){
                             // < in the middle of the string
+                            //throw invalid_argument("> is in the middle of the string");
                             return "Malformed";
                         }
                         // after everything is fine
@@ -301,9 +317,9 @@ string opLine(StackString stack, string sentences){
                             //throw invalid_argument("Malformed");
                             return "Malformed";
                         }
-                        if (*stack.top().c_str() > 'a' && 
-                        	*stack.top().c_str() < 'z'){
+                        if (*stack.top().c_str() > 'a' && *stack.top().c_str() < 'z'){
                             // < in the middle of the string
+                            //throw invalid_argument("< is in the middle of the string");
                             return "Malformed";
                         }
                         // after everything is fine
@@ -316,9 +332,9 @@ string opLine(StackString stack, string sentences){
                             //throw invalid_argument("Malformed");
                             return "Malformed";
                         }
-                        if (*stack.top().c_str() > 'a' && 
-                        	*stack.top().c_str() < 'z'){
+                        if (*stack.top().c_str() > 'a' && *stack.top().c_str() < 'z'){
                             // < in the middle of the string
+                            //throw invalid_argument("> is in the middle of the string");
                             return "Malformed";
                         }
                         // after everything is fine
@@ -390,7 +406,7 @@ string opLine(StackString stack, string sentences){
     // final check of the output
     if (reval.find("+") != string::npos || reval.find("-") != string::npos
         || reval.find("<") != string::npos || reval.find(">") != string::npos
-        || reval.find("(") != string::npos || reval.find(")") != string::npos){
+        || reval.find("(") != string::npos || reval.find(")") != string::npos) {
         //throw invalid_argument ("Malformed");
         return "Malformed";
     }
@@ -425,6 +441,13 @@ int main(int argc, const char * argv[]) {
     else {
         cout << "Cannot find the file";
     }
-   
+    
+    
+    
+    
+    
+    
+    
+    
     return 0;
 }
