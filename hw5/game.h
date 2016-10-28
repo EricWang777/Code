@@ -34,7 +34,7 @@ public slots:
 	void ExitScoreBoard();
 	void Pass_for_place();
 public:
-	Game(QApplication *app);
+	Game(QApplication *app, std::string dictionaryFileName, std::string boardFileName, std::string bagFileName, unsigned int numTiles);
 	~Game();
 	// public function of the game
 	void addPlayer(std::string name);

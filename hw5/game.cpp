@@ -2,31 +2,35 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <ctime>
 using namespace std;
 
 Game::~Game(){
+	for (int i = 0; i < num_player; ++i)
+	{
+		delete players[i];
+		delete print_player_score[i];
+		delete input_name[i];
+		delete player_index[i];
+	}
 	delete welcome_window;
 	delete _board;
 	delete name_window;
 	delete main_window;
 	delete _bag;
 	delete _dictionary;
-	for (unsigned int i = 0; i < players.size(); ++i)
-	{
-		delete players[i];
-	}
-	// to be continue...
+	delete score_board_window;
 }
 
-Game::Game(QApplication *app){
+Game::Game(QApplication *app, string dictionaryFileName, string boardFileName, string bagFileName, unsigned int numTiles){
 	this->app = app;
 // initalize the board
-	_board = new Board("board.txt");
+	_board = new Board(boardFileName);
 // initalize the bag
-	_bag = new Bag("bag.txt", 10);
-	max_hand_tiles = 7;
+	_bag = new Bag(bagFileName, time(0));
+	max_hand_tiles = numTiles;
 // initalize the dictionary
-	_dictionary = new Dictionary("dictionary.txt");
+	_dictionary = new Dictionary(dictionaryFileName);
 
 // welcome window
 	// initialize variable
@@ -631,11 +635,4 @@ string Game::findWinner(){
 
 
 
-
-
-int main(int argc, char *argv[]){
-	QApplication app(argc, argv);
-	Game game(&app);
-	return app.exec();
-}
 

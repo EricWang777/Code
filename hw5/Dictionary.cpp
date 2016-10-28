@@ -41,9 +41,8 @@ Dictionary::Dictionary (string dictionary_file_name)
 // using binary search
 bool Dictionary::search(string target){
     transform(target.begin(), target.end(), target.begin(), ::tolower);
-    //if (_dictionary.find(target)!=_dictionary.end()) return true;
-    //else return false;
-    return true;
+    if (_dictionary.find(target)!=_dictionary.end()) return true;
+    else return false;
 }
 
 
