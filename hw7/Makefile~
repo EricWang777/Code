@@ -1,0 +1,11 @@
+all: skyscraper
+
+
+skyscraper: bst.h avlbst.h main.cpp Skyscraper.o 
+	g++ -g -Wall $^ -o skyscraper
+
+Skyscraper.o: Skyscraper.h Skyscraper.cpp
+	g++ -g -Wall -c $^ -o Skyscraper.o
+
+clean:
+	rm skyscraper

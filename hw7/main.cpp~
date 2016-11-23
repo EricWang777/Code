@@ -1,0 +1,46 @@
+//
+//  main.cpp
+//  hw7
+//
+//  Created by WangBingtang on 11/13/16.
+//  Copyright © 2016 USC. All rights reserved.
+//
+
+#include <iostream>
+#include <ctime>
+#include "Skyscraper.h"
+using namespace std;
+
+
+
+int main(int argc, const char * argv[]) {
+    Skyscraper sky;
+    long long range_left, range_right, floor;
+    string color;
+    
+    
+    while (1) {
+        
+    cout << "Please input the range: ";
+    cin >> range_left;
+    cin >> range_right;
+    cin >> color;
+        if (range_left == range_right) {
+            pair<long long, string> node(range_left, color);
+            sky.insertSameFloor(node);
+        }
+        else{
+            pair<long long, string> nodeLeft(range_left, color);
+            pair<long long, string> nodeRight(range_right, sky.maxSmallColor(range_right));
+            sky.insert(nodeLeft);
+            sky.insert(nodeRight);
+            sky.clearOverlap(nodeLeft.first, nodeRight.first);
+        }
+    
+    sky.print();
+        cin >> floor;
+        cout << sky.findColor(floor) << endl;
+    }
+    
+    return 0;
+}
