@@ -1,7 +1,7 @@
 all: skyline
 
 
-skyline: bst.h avlbst.h skyline.cpp Skyscraper.o 
+skyscraper: bst.h avlbst.h skyline.cpp Skyscraper.o 
 	g++ -g -Wall $^ -o skyline
 
 Skyscraper.o: Skyscraper.h Skyscraper.cpp

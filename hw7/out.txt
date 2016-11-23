@@ -1,11 +1,11 @@
 red
-White
+white
 black
-White
+white
 red
 green
 red
-White
+white
 yellow
 red
 red
@@ -14,7 +14,7 @@ red
 black
 green
 black
-White
+white
 red
 green
 red
@@ -28,7 +28,7 @@ red
 red
 red
 gold
-White
+white
 black
 rose
 rose
@@ -2250,7 +2250,7 @@ orange
 green
 orange
 green
-White
+white
 cyan
 green
 cyan
